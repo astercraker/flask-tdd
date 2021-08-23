@@ -1,12 +1,11 @@
-from os import name
 from flask import Blueprint
-# from models import db,User
+from flask import current_app as app
 from app import models, db
 
+home_bp = Blueprint('home_bp', __name__)
 
-main = Blueprint("main", __name__)
 
-@main.route("/")
+@home_bp.route('/', methods=['GET'])
 def home():
     new_user = models.User(
         name="Domingo"
