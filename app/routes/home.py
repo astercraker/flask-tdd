@@ -8,9 +8,9 @@ main = Blueprint("main", __name__)
 
 @main.route("/")
 def home():
-    new_user = models.User(
-        name="Domingo"
-    )
-    db.session.add_all([new_user])
-    db.session.commit()
+    # new_user = models.User(
+    #     name="Domingo"
+    # )
+    # db.session.add_all([new_user])
+    # db.session.commit()
     return "Hola Mundo"

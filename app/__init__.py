@@ -12,7 +12,6 @@ def create_app():
     # Load enviroment variables
     settings_module = os.getenv('APP_SETTINGS_MODULE') if os.getenv('APP_SETTINGS_MODULE') else 'config.DevelopmentConfig'
     app.config.from_object(settings_module)
-
     db.init_app(app)
     migrate.init_app(app, db)
     
