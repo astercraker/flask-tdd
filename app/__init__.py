@@ -7,11 +7,12 @@ from flask_migrate import Migrate
 db = SQLAlchemy()
 migrate = Migrate()
 
-def create_app():
+def create_app(config_name):
     app = Flask(__name__, instance_relative_config=False)
     # Load enviroment variables
-    settings_module = os.getenv('APP_SETTINGS_MODULE') if os.getenv('APP_SETTINGS_MODULE') else 'config.DevelopmentConfig'
-    app.config.from_object(settings_module)
+    print(config_name)
+    app.config.from_object(config_name)
+    print("-------------",app.config['SQLALCHEMY_DATABASE_URI'])
     db.init_app(app)
     migrate.init_app(app, db)
     
