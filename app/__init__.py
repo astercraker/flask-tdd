@@ -12,7 +12,6 @@ def create_app(config_name):
     # Load enviroment variables
     print(config_name)
     app.config.from_object(config_name)
-    print("-------------",app.config['SQLALCHEMY_DATABASE_URI'])
     db.init_app(app)
     migrate.init_app(app, db)
     
