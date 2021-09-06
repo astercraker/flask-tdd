@@ -13,7 +13,7 @@ def home():
     # )
     # db.session.add_all([new_user])
     # db.session.commit()
-    return render_template("card.html")
+    return render_template("home.html")
 
 @main.route("/<name>")
 def home_name(name):
