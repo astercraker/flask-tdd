@@ -4,7 +4,7 @@ from flask import Blueprint, render_template
 from app import models, db
 
 
-main = Blueprint("main", __name__, template_folder="templates")
+main = Blueprint("main", __name__, template_folder="templates", static_folder="static")
 
 @main.route("/")
 def home():
@@ -13,7 +13,7 @@ def home():
     # )
     # db.session.add_all([new_user])
     # db.session.commit()
-    return render_template("index.html")
+    return render_template("card.html")
 
 @main.route("/<name>")
 def home_name(name):
