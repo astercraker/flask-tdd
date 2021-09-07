@@ -1,5 +1,9 @@
 html{
     background: #BED7FF;
+    background: #BED7FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #a9cafc, #d1e2fc);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #a9cafc, #d1e2fc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 .navbar{
     background: transparent;
@@ -22,4 +26,11 @@ html{
     color: whitesmoke;
     background: -webkit-linear-gradient(to right, #2E373D, #000000);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #2E373D, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
 }

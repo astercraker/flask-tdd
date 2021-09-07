@@ -2,6 +2,7 @@ from flask import Flask
 import os
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+import mimetypes
 
 # initialize sql-alchemy
 db = SQLAlchemy()
@@ -9,6 +10,7 @@ migrate = Migrate()
 
 def create_app(config_name):
     app = Flask(__name__, instance_relative_config=False)
+    mimetypes.add_type('text/javascript', '.js')
     # Load enviroment variables
     print(config_name)
     app.config.from_object(config_name)
