@@ -12,7 +12,7 @@ def create_app(config_name):
     app = Flask(__name__, instance_relative_config=False)
     mimetypes.add_type('text/javascript', '.js')
     # Load enviroment variables
-    print(config_name)
+    print("Config Name ------------- ",config_name)
     app.config.from_object(config_name)
     db.init_app(app)
     migrate.init_app(app, db)
